@@ -6,10 +6,10 @@ admin.site.site_header = 'FAQ Dashboard'
 
 
 # Register your models here.
-urlpatterns = [
-path('admin/', admin.site.urls),
-path('', include('pages.urls')), # new
-]
+# urlpatterns = [
+# path('admin/', admin.site.urls),
+# path('', include('pages.urls')), # new
+# ]
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -18,6 +18,6 @@ class CategoryAdmin(admin.ModelAdmin):
     list_filter = ['name', ]
     list_per_page = 20
     actions_selection_counter = True
-    date_hierarchy = 'name'
+    # date_hierarchy = 'name'
     search_fields = ('name',)
     ordering = ('name', )
